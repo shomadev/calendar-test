@@ -1,0 +1,140 @@
+.calendar-container {
+  font-family: Arial, sans-serif;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #ddd;
+}
+
+.calendar-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.toggle-week-button {
+  background-color: crimson;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-btn {
+  border: none;
+  outline: none;
+  padding: 10px 10px 7px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 1s ease;
+  border-radius: 50%;
+}
+.nav-btn:hover {
+  background-color: #b9b9b9;
+}
+.weekday-header,
+.day-tile {
+  padding: 10px;
+  background-color: white;
+  height: 70px;
+  border: 1px solid rgb(150, 150, 150);
+  cursor: pointer;
+  transition: 0.5 ease;
+}
+
+.weekday-header {
+  padding: 10px;
+  background-color: white;
+  height: 30px;
+  text-align: center;
+  border: 1px solid rgb(150, 150, 150);
+  font-size: 13px;
+}
+
+.day-tile:hover {
+  background-color: #ddd;
+}
+
+.greyed-out {
+  color: #bbb;
+}
+
+.today {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+}
+
+.empty-tile {
+  background-color: transparent;
+  border: none;
+}
+
+.current-month {
+  margin-left: 40px;
+  font-size: 18px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5e5e5e;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .weekday-header {
+    font-size: 10px;
+  }
+  .day-tile {
+    font-size: 10px;
+    max-height: 10px;
+  }
+  .today {
+    max-width: 10px;
+    max-height: 10px;
+  }
+  .current-month {
+    font-size: 14px;
+  }
+  .toggle-week-button {
+    max-width: 40px;
+    max-height: 40px;
+
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    overflow: hidden;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .toggle-week-button span {
+    display: none;
+  }
+
+  .toggle-week-button .short-text {
+    display: inline;
+  }
+  .current-month {
+    margin-left: 10px;
+  }
+}
